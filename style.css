@@ -1,51 +1,102 @@
-body {
+/* RESET */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
   background: #0d0d0d;
-  color: white;
+  color: #fff;
+  line-height: 1.6;
 }
 
 /* NAVBAR */
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  background: #111;
+  align-items: center;
+  padding: 25px 40px;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+}
+
+nav h2 {
+  font-weight: 600;
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 30px;
 }
 
 nav a {
-  color: white;
+  color: #ccc;
   text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: white;
 }
 
 /* HEADER */
 header {
   text-align: center;
-  padding: 100px 20px;
+  padding: 140px 20px 100px;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #aaa;
+  font-size: 1.2rem;
 }
 
 /* SECTIONS */
 section {
-  padding: 60px 20px;
-  max-width: 800px;
+  padding: 80px 20px;
+  max-width: 900px;
   margin: auto;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
 }
 
 /* PROJECT CARDS */
 .project {
   background: #1a1a1a;
-  padding: 20px;
+  padding: 25px;
   margin-top: 20px;
-  border-radius: 10px;
-  transition: 0.3s;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .project:hover {
-  transform: scale(1.03);
+  transform: translateY(-5px);
+  background: #222;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+/* FADE-IN ANIMATION */
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
 }
