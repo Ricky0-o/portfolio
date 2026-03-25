@@ -1,7 +1,51 @@
 body {
+  margin: 0;
+  font-family: Arial, sans-serif;
   background: #0d0d0d;
   color: white;
-  font-family: Arial;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #111;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* HEADER */
+header {
   text-align: center;
-  padding-top: 100px;
+  padding: 100px 20px;
+}
+
+/* SECTIONS */
+section {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* PROJECT CARDS */
+.project {
+  background: #1a1a1a;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.project:hover {
+  transform: scale(1.03);
 }
